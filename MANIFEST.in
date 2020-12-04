@@ -1,0 +1,13 @@
+exclude .gitignore
+include README.md
+include setup.cfg
+include requirements.txt
+
+include static/swagger.json
+
+prune .cache
+prune .git
+prune build
+prune dist
+recursive-exclude *.egg-info *
+recursive-include tests *
