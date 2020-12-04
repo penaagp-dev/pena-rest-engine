@@ -32,10 +32,9 @@ class RunTests(Command):
 
 
 setup(
-    # name='{{PROJECT_NAME}}',
     name='pena',
     version=__version__,
-    description='{{PROJECT_NAME}} service',
+    description='microservice specialist framework',
     long_description=long_description,
     url='',
     author='Sofyan Saputra',
@@ -54,7 +53,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8'
     ],
-    keywords='otoraja cdc elastic',
+    keywords='pena framework microservice specialist',
     include_package_data=True,
     packages=find_packages(exclude=['docs', 'tests*']),
     install_requires=install_requires,
@@ -64,7 +63,6 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            # '{{PROJECT_NAME}} = src:main',
             'pena = src:main',
         ],
     },
