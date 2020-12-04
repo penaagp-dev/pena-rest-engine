@@ -17,10 +17,10 @@ def create_app():
     # jwt.init_app(app)
 
     CORS(app, resources={r"/api/*": {"origins": "*"}})
-    from .router import api_blueprint
+    from .router import v1_blueprint
     from .router import swaggerui_blueprint
 
     app.register_blueprint(swaggerui_blueprint, url_prefix=os.environ.get('SWAGGER_URL'))
-    app.register_blueprint(api_blueprint)
+    app.register_blueprint(v1_blueprint)
 
     return app
