@@ -39,7 +39,6 @@ def response(status_code, message=None, data=None):
 
     # http_code = 200 if status == 'success' else 400
     status = {}
-    status['count'] = len(data) if data else 0
     status['data'] = data if data else None
     status['code'] = status_code
     if status_code in success_status:
