@@ -1,6 +1,6 @@
 """
 Usage:
-  cdc <command> [<args>...]
+  pena <command> [<args>...]
 
 Options:
   -h, --help                             Display this help and exit
@@ -10,7 +10,7 @@ Commands:
   http                                 Starting http serve
   migrate                              Migrating apps
 
-Run 'cdc COMMAND --help' for more information on a command.
+Run 'pena COMMAND --help' for more information on a command.
 """
 __version__ = "1.0.0"
 from inspect import getmembers, isclass
