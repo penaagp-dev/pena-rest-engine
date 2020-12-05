@@ -6,15 +6,18 @@ import os, traceback
 class Http(Base): 
     """
 usage:
-    http serve
+    http serve [-e ENV]
 
 Command:
-
+    serve                                      start serve
 Options:
--h --help                             Print usage
+-h --help                                      Print usage
+-e environment --environment=ENV               Choose your driver
+
     """
 
     def execute(self):
+        # env_path = self.args["--environment"]
         if self.args["serve"]:
             try:
                 httpServe = create_app(app)
