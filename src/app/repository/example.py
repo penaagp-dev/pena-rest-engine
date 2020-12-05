@@ -1,9 +1,9 @@
-from src.app.repository import conn
+from src.app.repository import __cursor__ as curr
 
 
 def insert(data):
     try:
-        conn.execute("")
+        curr.execute("")
     except Exception as e:
         print("error:>", e)
         return e

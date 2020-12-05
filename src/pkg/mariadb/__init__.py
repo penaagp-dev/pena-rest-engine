@@ -1,13 +1,18 @@
-from flask_mysqldb import MySQL
 import os
+import pymysql
 
-def get_connection(app):
-    app.config["MYSQL_HOST"] = os.environ.get("DB_HOST", "localhost")
-    app.config["MYSQL_PORT"] = os.environ.get("DB_PORT", 3306)
-    app.config["MYSQL_USER"] = os.environ.get("DB_USER", "root")
-    app.config["MYSQL_PASSWORD"] = os.environ.get("DB_PASSWORD", "")
-    app.config["MYSQL_DB"] = os.environ.get("DB_NAME", "database")
-    
-    mariadb = MySQL(app)
-    # mariadb.init_app(app)
-    return mariadb.connection
+def get_connection():
+    conn = pymysql.connect(
+        host=os.environ.get("DB_HOST"),
+        user=os.environ.get("DB_USER"),
+        port=int(os.environ.get("DB_PORT")),
+        password=os.environ.get("DB_PASSWORD"),
+        db=os.environ.get("DB_NAME"),
+        charset='utf8',
+        cursorclass=pymysql.cursors.DictCursor
+    )
+    return conn
+
+def get_cursor():
+    conn = get_connection()
+    return conn.cursor()
