@@ -1,6 +1,6 @@
 from .base import Base
 from src.app import create_app, app
-import os
+import os, traceback
 
 class Http(Base): 
     """
@@ -21,6 +21,7 @@ Options:
                     port=int(os.environ.get('APP_PORT', 8081)))
             except Exception as e:
                 print(e)
+                print(traceback.format_exc())
                 exit(1)
             
             exit(0)
