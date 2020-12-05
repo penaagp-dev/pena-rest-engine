@@ -18,6 +18,10 @@ pip install -e .
 pip install .
 ```
 
-### Deploy
+### Running
+```
+pena http serve
+```
+
 
 
