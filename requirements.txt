@@ -4,7 +4,8 @@ Flask==1.1.2
 flask_cors==3.0.9
 flask_restful==0.3.8
 flask_swagger_ui==3.36.0
+pymysql==0.10.1
 pytest==6.1.2
 python-dotenv==0.15.0
 python_json_logger==2.0.1
-PyMySQL==0.10.1
+yoyo-migrations==0.4.1
