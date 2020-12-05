@@ -124,3 +124,4 @@ lib/*
 requirements_lama.txt
 
 production/*
+.DS_Store

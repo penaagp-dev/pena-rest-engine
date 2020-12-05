@@ -1,4 +1,5 @@
 from .base import Base
+from sys import exit
 import os
 
 class Seed(Base): 

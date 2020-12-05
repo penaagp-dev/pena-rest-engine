@@ -2,7 +2,7 @@ exclude .gitignore
 include README.md
 include setup.cfg
 include requirements.txt
-
+include .env
 include static/swagger.json
 
 prune .cache

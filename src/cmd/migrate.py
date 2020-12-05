@@ -1,5 +1,6 @@
 from .base import Base
 from src.pkg.yoyo import migration, rollback
+from sys import exit
 import os, traceback
 
 class Migrate(Base): 

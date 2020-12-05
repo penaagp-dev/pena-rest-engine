@@ -1,5 +1,6 @@
 from .base import Base
 from src.app import create_app, app
+from sys import exit
 import os, traceback
 
 class Http(Base): 
