@@ -1,15 +1,11 @@
 from flask_restful import Resource, reqparse, fields
-from src.app.appctx import Appctx
+from src.app.appctx import result
 import datetime
 
 
-class HealthController(Resource):
-    def __init__(self):
-        self.data = Appctx().data
-        self.response = Appctx().response
-    
+class HealthController(Resource):   
     def get(self):
         # health controller
-        return self.response(401, message="OK")
+        return result.response(200, message="OK")
 
 
