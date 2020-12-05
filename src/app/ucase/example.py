@@ -5,5 +5,5 @@ import datetime
 
 class Example(Resource):
     def get(self):
-        example.insert("OK")
+        
         return response(200, message="OK")
