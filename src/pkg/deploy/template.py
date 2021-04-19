@@ -53,29 +53,28 @@ def make_main():
     """
     return main_files
 
-def make_environment(name, mode, debug):
+def make_environment(name=str, mode=str, debug=bool):
     mode = {
         "dev": "development",
         "stg": "staging",
         "prd": "production"
     }
+    
     env_files = """APP_NAME="""+name+"""
     APP_HOST=127.0.0.1
     APP_PORT=8081
     SECRET_KEY=asdsagdasgdasf@asfdasgvdasda@#!@#!%$#%@#@@##
-    FLASK_ENV="""+name+"""
-    FLASK_DEBUG = True
-    FLASK_REDIS_URL = redis://:pass@127.0.0.1:6379/0
-
-    JWT_SECRET_KEY = wqertyudfgfhjhkcxvbnmn@123$32213
+    FLASK_ENV="""+mode["mode"]+"""
+    FLASK_DEBUG="""+debug+"""
+    FLASK_REDIS_URL=redis://:pass@127.0.0.1:6379/0
 
     DB_HOST=localhost
     DB_PORT=3306
-    DB_USER=oni-flag-service
-    DB_PASSWORD=oni-flag-service
-    DB_NAME=oni-flag-service
+    DB_USER=
+    DB_PASSWORD=
+    DB_NAME=
 
-    SWAGGER_URL = '/api/docs'
-    SWAGGER_API_URL = 'http://petstore.swagger.io/v2/swagger.json'
+    SWAGGER_URL='/api/docs'
+    SWAGGER_API_URL='http://petstore.swagger.io/v2/swagger.json'
     """
     return env_files

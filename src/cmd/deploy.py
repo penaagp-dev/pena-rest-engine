@@ -7,8 +7,8 @@ class Deploy(Base):
     """
 usage:
     deploy production  [-n NAME]
-    deploy staging  [-n NAME] --debug=<BOOL>
-    deploy development  [-n NAME] --debug=<BOOL>
+    deploy staging  [-n NAME]
+    deploy development  [-n NAME]
 
 Command:
     deploy                                      start setup deployment
@@ -27,7 +27,6 @@ Options:
             debug = "False"
         if self.args["production"]:
             try:
-                debug = "False"
                 mode = "prd"
                 print(name, mode, debug)
             except Exception as e:
@@ -36,7 +35,6 @@ Options:
             exit(0)
         if self.args["staging"]:
             try:
-                
                 mode = "stg"
                 print(name, mode, debug)
             except Exception as e:
@@ -45,10 +43,8 @@ Options:
             exit(0)
         if self.args["development"]:
             try:
-                debug = self.args["--debug"]
                 mode = "dev"
                 print(name, mode, debug)
-
             except Exception as e:
                 print("Setup error:> ",e)
                 exit(1)
