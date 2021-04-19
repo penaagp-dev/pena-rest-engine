@@ -9,6 +9,7 @@ Options:
 Commands:
   http                                 Starting http serve
   migrate                              Migrating apps
+  deploy                                Setup apps
 
 Run 'pena COMMAND --help' for more information on a command.
 """
