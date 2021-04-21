@@ -4,7 +4,7 @@ from sys import exit
 import os
 
 APP_ROOT = os.path.join(os.path.dirname(__file__), '../..')
-dotenv_path = os.path.join(APP_ROOT, '.env')
+dotenv_path = os.path.join(os.getcwd(), '.env')
 def config(path=None):
     try:
         if path == None:
