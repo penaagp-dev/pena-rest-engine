@@ -32,7 +32,7 @@ class RunTests(Command):
 
 
 setup(
-    name='{{PROJECT_NAME}}',
+    name='pena',
     version=__version__,
     description='microservice specialist framework',
     long_description=long_description,
@@ -64,7 +64,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            '{{PROJECT_NAME}} = src.main:main',
+            'pena=src.main:main',
         ],
     },
     cmdclass={'test': RunTests},
