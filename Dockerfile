@@ -1,7 +1,6 @@
 FROM python:alpine3.10
-#CDC start from here
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY . .
 
@@ -11,6 +10,4 @@ RUN apk add gcc musl-dev \
 
 EXPOSE 3000
 
-EXPOSE 3000
-
-CMD ["pena", "http", "serve"]
+CMD ["pena", "http", "start"]
