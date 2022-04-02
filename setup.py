@@ -64,7 +64,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'pena=src.__main__:main',
+            'pena=src.main:main',
         ],
     },
     cmdclass={'test': RunTests},
