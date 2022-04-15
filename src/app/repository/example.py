@@ -1,12 +1,10 @@
-from src.app.repository import conn, curr
+from src.app.repository import conn
 
-
-def insert(data):
+cur = conn.cursor()
+def insert():
     try:
-        curr.execute("SELECT * FROM guest")
+        cur.execute("SELECT * FROM guest")
     except Exception as e:
-        print("error:>", e)
-        return e
+        raise e
     else:
-        print(data)
-        return data
+        return cur.fetchall()

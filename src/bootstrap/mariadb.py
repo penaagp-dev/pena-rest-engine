@@ -6,6 +6,8 @@ def mysql(app=None):
         'user': os.environ.get("DB_USER", "localhost"),
         'password': os.environ.get("DB_PASSWORD", "localhost"),
         'host': os.environ.get("DB_HOST", "localhost"),
+        'db': os.environ.get("DB_NAME"),
+        "charset": 'utf8',
         'cursorclass': 'DictCursor'
     }
     return MySQL(app)

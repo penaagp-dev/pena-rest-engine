@@ -25,7 +25,7 @@ class MySQL(object):
     @property
     def connection(self):
         try:
-            ctx = self.app.top
+            ctx = self.app.app_context()
             if ctx is not None:
                 if not hasattr(ctx, 'mysql_db'):
                     ctx.mysql_db = self.connect
@@ -34,6 +34,6 @@ class MySQL(object):
             print("Eror: ", e)
 
     def teardown(self, exception):
-        ctx = self.app.top
+        ctx = self.app.app_context()
         if hasattr(ctx, 'mysql_db'):
             ctx.mysql_db.close()
