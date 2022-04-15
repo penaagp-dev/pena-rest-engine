@@ -8,3 +8,4 @@ def insert():
         raise e
     else:
         return cur.fetchall()
+
