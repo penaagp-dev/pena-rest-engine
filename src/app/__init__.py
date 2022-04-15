@@ -2,13 +2,12 @@ import os
 from src.config import Config
 from flask import Flask
 from flask_cors import CORS
-from src.bootstrap import mariadb
-from src.pkg.mariadb import MySQL
+from src.bootstrap import bootstrap
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
-mysql = mariadb.mysql(app)
+package = bootstrap(app)
 
 def create_app(app):
     CORS(app, resources={r"/api/*": {"origins": "*"}})
