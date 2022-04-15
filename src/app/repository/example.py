@@ -1,9 +1,9 @@
-from src.app.repository import __cursor__ as curr
+from src.app.repository import conn, curr
 
 
 def insert(data):
     try:
-        curr.execute("")
+        curr.execute("SELECT * FROM guest")
     except Exception as e:
         print("error:>", e)
         return e
