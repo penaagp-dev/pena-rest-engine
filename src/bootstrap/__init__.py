@@ -14,7 +14,7 @@ class bootstrap(object):
             "charset": 'utf8',
             'cursorclass': 'DictCursor'
         }
-        return MySQL(self.app)
+        return MySQL(self.app).connect
 
     def boto(self):
         self.app.config["BOTO3_REGION"] = os.environ.get("AWS_REGION", "ap-southeast-1")

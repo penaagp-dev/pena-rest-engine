@@ -1,6 +1,6 @@
-from src.app.repository import conn
+from src.app.repository import mysql
 
-cur = conn.cursor()
+cur = mysql.cursor()
 def insert():
     try:
         cur.execute("SELECT * FROM guest")
