@@ -1,4 +1,3 @@
-from src.app import package
+from src.app import bootstrap
 
-mysql = package.mysql()
-conn = mysql.connection
+mysql = bootstrap.mysql()
