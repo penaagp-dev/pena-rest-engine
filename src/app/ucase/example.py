@@ -6,4 +6,5 @@ import datetime
 class Example(Resource):
     def get(self):
         data = example.insert()
-        return result.response(200, message="OK", data=data)
+        print("OK")
+        return result.response(200, message="OK")

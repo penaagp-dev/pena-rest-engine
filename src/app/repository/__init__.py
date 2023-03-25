@@ -1,3 +1,3 @@
-from src.app import package
+from src.app import bootstrap
 
-mysql = package.mysql()
+mysql = bootstrap.mysql()

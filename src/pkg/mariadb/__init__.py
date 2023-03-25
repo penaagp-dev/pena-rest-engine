@@ -37,3 +37,13 @@ class MySQL(object):
         ctx = self.app.app_context()
         if hasattr(ctx, 'mysql_db'):
             ctx.mysql_db.close()
+    
+    def fetch(self, query, params):
+        curr = self.connect.cursor()
+        try:
+            curr.execute(query=query, args=params)
+        except Exception as e:
+            print(e)
+            return e
+        else:
+            return curr.fetchall()

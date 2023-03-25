@@ -1,2 +1,2 @@
-from .routes import v1_blueprint
+from .routes import internal_blueprint, external_blueprint
 from src.swagger import swaggerui_blueprint

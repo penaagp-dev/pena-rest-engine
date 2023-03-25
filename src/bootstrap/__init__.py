@@ -1,7 +1,8 @@
 import os
 from src.pkg.mariadb import MySQL
 from src.pkg.boto import Boto3
-class bootstrap(object):
+
+class Bootstrap(object):
     def __init__(self, app=None):
         self.app = app
 
@@ -11,6 +12,7 @@ class bootstrap(object):
             'password': os.environ.get("DB_PASSWORD", "localhost"),
             'host': os.environ.get("DB_HOST", "localhost"),
             'db': os.environ.get("DB_NAME"),
+            'port': int(os.environ.get("DB_PORT")),
             "charset": 'utf8',
             'cursorclass': 'DictCursor'
         }
