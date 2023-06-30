@@ -16,4 +16,8 @@ def create_app(app):
     app.register_blueprint(swaggerui_blueprint, url_prefix=os.environ.get('SWAGGER_URL'))
     app.register_blueprint(internal_blueprint)
     app.register_blueprint(external_blueprint)
+    #  threading example
+    from .router import kafka
+    kafka.routes()
+    # end example
     return app

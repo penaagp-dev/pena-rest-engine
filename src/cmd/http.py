@@ -23,6 +23,7 @@ Options:
                 httpServe = create_app(app)
                 httpServe.run(host=os.environ.get('APP_HOST', 'localhost'),
                     port=int(os.environ.get('APP_PORT', 8081)))
+                
             except Exception as e:
                 print(e)
                 print(traceback.format_exc())
